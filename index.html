@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!--
+  Student Name: Hazem Sayed
+  Student ID:   [224101252]
+  Course:       FT-WEB-101 - Field Training I - Task 1: Profile page
+
+
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MAZZO - the personal profile page of Hazem Sayed, Computer Science and Artificial Intelligence student.">
+  <title>MAZZO | Hazem Sayed - The Marvel Universe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- "dark" is the default theme. script.js removes it if the visitor saved the light theme. -->
+<body class="dark">
+
+  <!-- ===================== HEADER: NAVBAR + HERO ===================== -->
+  <header id="top">
+
+    <!-- Navbar: name on the left, three links + theme button on the right (Flexbox) -->
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="MAZZO, Hazem Sayed - back to top">
+        <!-- Original geometric "M" emblem -->
+        <svg class="emblem" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+          <path class="emblem-hex" d="M20 2 L36 11 V29 L20 38 L4 29 V11 Z"></path>
+          <path class="emblem-m" d="M11 28 V13 L20 22 L29 13 V28"></path>
+        </svg>
+        <span class="brand-text">
+          <strong>MAZZO</strong>
+          <small>Hazem Sayed</small>
+        </span>
+      </a>
+
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- The ONE theme button: script.js toggles the class "dark" on <body> -->
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="true">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="4.5"></circle>
+            <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"></path>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2Z"></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="hero-slash"></span>
+        <span class="halftone"></span>
+      </div>
+      <div class="particles" id="particles" aria-hidden="true"></div>
+
+      <!-- Superheroes emerging from the screen edges (decorative) -->
+      <div class="char char-captain-america hero-cap" aria-hidden="true"></div>
+      <div class="char char-iron-man hero-iron" aria-hidden="true"></div>
+
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">THE MULTIVERSE PRESENTS</p>
+          <h1 class="hero-title"><span class="first">HAZEM</span> <span class="last">SAYED</span></h1>
+          <p class="hero-subtitle">Computer Science &amp; Artificial Intelligence Student</p>
+          <p class="hero-tags">Data Science | Graphic Design | Leadership</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#about">EXPLORE</a>
+            <a class="btn btn-ghost" href="#contact">CONTACT ME</a>
+          </div>
+        </div>
+
+        <!-- The ONE profile photo -->
+        <figure class="portrait">
+          <span class="portrait-ring" aria-hidden="true"></span>
+          <div class="portrait-frame">
+            <img src="images/me.jpg" alt="Hazem Sayed smiling, wearing glasses and a navy blazer over a white shirt, taking a mirror selfie" width="520" height="630">
+          </div>
+          <figcaption class="portrait-tag">ORIGIN STORY &middot; CHAPTER 01</figcaption>
+        </figure>
+      </div>
+    </section>
+  </header>
+
+  <!-- ===================== MAIN ===================== -->
+  <main>
+
+    <!-- ---------- ABOUT ---------- -->
+    <section id="about" class="section about">
+      <!-- Spider-Man hanging from the upper corner -->
+      <div class="hang" aria-hidden="true">
+        <div class="char char-spider-man hang-char"></div>
+      </div>
+
+      <div class="section-inner about-grid">
+        <div class="about-copy reveal">
+          <p class="kicker">01 &mdash; THE ORIGIN</p>
+          <h2>EVERY HERO HAS AN ORIGIN STORY.</h2>
+          <p class="lead">I'm Hazem Sayed, a Computer Science and Artificial Intelligence student.</p>
+          <p>I love turning data into intelligence, shaping ideas into visuals people remember, and working with teams to make things happen. This page is the first chapter of my story &mdash; and the multiverse is only getting started.</p>
+        </div>
+
+        <aside class="dossier reveal" aria-label="Profile file">
+          <span class="peek peek-black-widow" aria-hidden="true"></span>
+          <span class="stamp" aria-hidden="true">ORIGIN FILE</span>
+          <dl>
+            <div><dt>Name</dt><dd>Hazem Sayed</dd></div>
+            <div><dt>Field</dt><dd>Computer Science &amp; Artificial Intelligence</dd></div>
+            <div><dt>Powers</dt><dd>Data Science &middot; Graphic Design &middot; Leadership</dd></div>
+            <div><dt>Status</dt><dd>Student &mdash; origin story in progress</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ---------- SKILLS: exactly THREE cards in a Flexbox row ---------- -->
+    <section id="skills" class="section skills">
+      <!-- Hulk emerging from behind the cards -->
+      <div class="char char-hulk skills-hulk" aria-hidden="true"></div>
+
+      <div class="section-inner">
+        <p class="kicker">02 &mdash; THE AVENGERS TEAM</p>
+        <h2>CHOOSE YOUR SUPERPOWER.</h2>
+
+        <div class="cards">
+          <article class="card card-iron reveal">
+            <span class="peek peek-iron-man" aria-hidden="true"></span>
+            <span class="card-icon icon-reactor" aria-hidden="true"></span>
+            <p class="card-label">01 &middot; IRON MAN</p>
+            <h3>AI &amp; DATA SCIENCE</h3>
+            <p>Turning data into intelligence and exploring the possibilities of artificial intelligence.</p>
+          </article>
+
+          <article class="card card-cap reveal">
+            <span class="peek peek-captain-america" aria-hidden="true"></span>
+            <span class="card-icon icon-shield" aria-hidden="true"></span>
+            <p class="card-label">02 &middot; CAPTAIN AMERICA</p>
+            <h3>GRAPHIC DESIGN</h3>
+            <p>Transforming creative ideas into meaningful visual experiences.</p>
+          </article>
+
+          <article class="card card-thor reveal">
+            <span class="peek peek-thor" aria-hidden="true"></span>
+            <span class="card-icon icon-bolt" aria-hidden="true"></span>
+            <p class="card-label">03 &middot; THOR</p>
+            <h3>LEADERSHIP &amp; TEAMWORK</h3>
+            <p>Building communities, leading teams, and creating impact.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- CONTACT ---------- -->
+    <section id="contact" class="section contact">
+      <div class="char char-nick-fury contact-fury" aria-hidden="true"></div>
+      <div class="char char-scarlet-witch contact-wanda" aria-hidden="true"></div>
+
+      <div class="section-inner contact-inner">
+        <p class="kicker">03 &mdash; ASSEMBLE</p>
+        <h2>JOIN THE TEAM.</h2>
+        <p class="greeting" id="greeting" aria-live="polite">Type your name and say hello.</p>
+
+        <form id="contact-form" class="form reveal" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" maxlength="40" required aria-describedby="name-error">
+            <p class="error" id="name-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required aria-describedby="email-error">
+            <p class="error" id="email-error"></p>
+          </div>
+
+          <button type="submit" class="btn btn-primary">JOIN THE TEAM</button>
+          <p class="form-status" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <!-- Heroes peeking up from behind the footer -->
+    <div class="foot-char char-doctor-strange foot-1" aria-hidden="true"></div>
+    <div class="foot-char char-rocket foot-2" aria-hidden="true"></div>
+    <div class="foot-char char-captain-marvel foot-3" aria-hidden="true"></div>
+    <div class="foot-char char-falcon foot-4" aria-hidden="true"></div>
+    <div class="foot-char char-hawkeye foot-5" aria-hidden="true"></div>
+
+    <p class="footer-tagline"><span>AVENGERS ASSEMBLE.</span> <span>IDEAS COME ALIVE.</span></p>
+    <p class="copyright">&copy; 2026 HAZEM SAYED &mdash; MAZZO. ALL RIGHTS RESERVED.</p>
+
+    <a class="to-top" id="to-top" href="#top" aria-label="Back to top">&uarr;</a>
+  </footer>
+
+  <!-- JavaScript: linked last, at the end of body -->
+  <script src="script.js"></script>
+</body>
+</html>
